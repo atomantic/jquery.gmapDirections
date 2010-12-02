@@ -42,6 +42,31 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 			})
 		</script>
 
+4. You can override the element IDs for all the needed parts in the config object passed to the plugin. Here it is called with all the defaults:
+
+		<script type="text/javascript">
+			$(funciton(){
+				$('#Map').gmapDirections({
+					center: 'Seattle', 			// a valid address or location search to start with
+					directions: 'Directions',	// element ID to hold directions printout
+					end: 'EndAddress',			// element ID for end address textfield
+					iconHeight: 50, 			// height of custom icon image
+					iconImg: false,				// custom icon image?
+					iconWidth: 50, 				// width of custom icon image
+					onFail: function(){			// failed loading center element
+						alert('could not find address');
+					},	
+					onFinish: function(){		// after direction load
+					},
+					start: 'StartAddress',		// element ID for start address textfield
+					submit: 'GetDirections',	// element ID for the action button
+					tooltip: false,				// custom tooltip?
+					zoom: 15					// zoom level - refer to google maps API specs
+				});
+			})
+		</script>
+
+
 #Demos:#
 
 The repository holds a demo in index.html, which is published on the github project page:
