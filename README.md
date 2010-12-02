@@ -15,12 +15,12 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 1. Get a Google Maps API Key: [http://code.google.com/apis/maps/signup.html](http://code.google.com/apis/maps/signup.html)
 2. Include the needed js files:
 
-	<!-- Include jQuery >= 1.4.2: http://paulirish.com/2010/the-protocol-relative-url/-->
+	`<!-- Include jQuery >= 1.4.2: http://paulirish.com/2010/the-protocol-relative-url/-->`
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+	`<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>`
 	
-	<!-- non google fallback -->
-	<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+	`<!-- non google fallback -->`
+	`<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.4.2.js"%3E%3C/script%3E'))</script>`
 	
 	`<!-- Google Maps API library (Make sure to replace YOUR_API_KEY_HERE) -->`
 	
@@ -32,11 +32,11 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 
 	`<!-- call the plugin -->`
 	
-	<script type="text/javascript">
+	`<script type="text/javascript">`
 		$(funciton(){
 			$('#Map').gmapDirections();
 		})
-	</script>
+	`</script>`
 	
 #Demos:#
 
