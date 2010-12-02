@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jquery.gmapDirections: Demo</title>
+	<style type="text/css">
+		#Map {
+			width:500px;
+			height:300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<label>Start:</label><input type="text" id="StartAddress" value="Seattle" />
+		<label>End:</label><input type="text" id="EndAddress" value="Portland" />
+		<input type="submit" id="GetDirections" value="Get Directions" />
+		<div id="Directions"></div>
+		<div id="Map"></div>
+	</div>
+	<!-- Include jQuery >= 1.4.2: [http://paulirish.com/2010/the-protocol-relative-url/](http://paulirish.com/2010/the-protocol-relative-url/) -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<!-- non google fallback -->
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
+	<!-- Google Maps API library (Make sure to replace the API key) -->
+	<script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&sensor=true&key=ABQIAAAAHurSAwsvkPMdZ7CLPX9lcRQ9gXopEVSNETz7wZ56CC7iP7bibRT7R4GXSakXFATmPD466_xCuOxZDg"></script>
+	<!-- Load the gmapDirections wrapper -->
+	<script type="text/javascript" src="jquery.gmapDirections.js?BUILD_VERSION_NUMBER"></script>
+
+	<!-- call the plugin -->
+	<script type="text/javascript">
+		$(function(){
+			$('#Map').gmapDirections();
+		});
+	</script>
+</body>
+</html>
