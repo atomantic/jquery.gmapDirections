@@ -23,11 +23,11 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 
 3. Include the needed js files:
 
-        <!-- Include jQuery >= 1.4.2: http://paulirish.com/2010/the-protocol-relative-url/-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>     
+        <!-- Include latest jQuery. Tested with jQuery >= 1.4.2: http://paulirish.com/2010/the-protocol-relative-url/-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>     
     
         <!-- non google fallback -->
-        <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.4.2.js"%3E%3C/script%3E'))</script>  
+        <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery.min.js"%3E%3C/script%3E'))</script>  
         
         <!-- Google Maps API library (Make sure to replace YOUR_API_KEY_HERE) -->
         <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&sensor=true&key=YOUR_API_KEY_HERE"></script>
@@ -37,7 +37,7 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 
         <!-- call the plugin -->
         <script type="text/javascript">
-            $(funciton(){
+            $(function(){
                 $('#Map').gmapDirections();
             })
         </script>
@@ -45,23 +45,23 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 4. You can override the element IDs for all the needed parts in the config object passed to the plugin. Here it is called with all the defaults:
 
         <script type="text/javascript">
-            $(funciton(){
+            $(function(){
                 $('#Map').gmapDirections({
                     center: 'Seattle',             // a valid address or location search to start with
-                    directions: 'Directions',    // element ID to hold directions printout
-                    end: 'EndAddress',            // element ID for end address textfield
-                    iconHeight: 50,             // height of custom icon image
+                    directions: 'Directions',      // element ID to hold directions printout
+                    end: 'EndAddress',             // element ID for end address textfield
+                    iconHeight: 50,                // height of custom icon image
                     iconImg: false,                // custom icon image?
                     iconWidth: 50,                 // width of custom icon image
                     onFail: function(){            // failed loading center element
                         alert('could not find address');
                     },    
-                    onFinish: function(){        // after direction load
+                    onFinish: function(){          // after direction load
                     },
-                    start: 'StartAddress',        // element ID for start address textfield
-                    submit: 'GetDirections',    // element ID for the action button
+                    start: 'StartAddress',         // element ID for start address textfield
+                    submit: 'GetDirections',       // element ID for the action button
                     tooltip: false,                // custom tooltip?
-                    zoom: 15                    // zoom level - refer to google maps API specs
+                    zoom: 15                       // zoom level - refer to google maps API specs
                 });
             })
         </script>
