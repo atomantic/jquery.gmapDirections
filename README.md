@@ -23,8 +23,8 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
 
 3. Include the needed js files:
 
-        <!-- Include latest jQuery. Tested with jQuery >= 1.4.2: http://paulirish.com/2010/the-protocol-relative-url/-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>     
+        <!-- Include jQuery. Tested with jQuery >= 1.9.1: http://paulirish.com/2010/the-protocol-relative-url/-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
     
         <!-- non google fallback -->
         <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery.min.js"%3E%3C/script%3E'))</script>  
@@ -54,6 +54,7 @@ This is a simple wrapper for the Google Maps API to load a map and handle a star
                     iconImg: false,                // custom icon image?
                     iconWidth: 50,                 // width of custom icon image
                     onFail: function(){            // failed loading center element
+                        // this should be something better than an alert (something useful), but for demo purposes:
                         alert('could not find address');
                     },    
                     onFinish: function(){          // after direction load

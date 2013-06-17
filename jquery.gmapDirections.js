@@ -1,8 +1,10 @@
+/*global GDirections,GIcon,GSize,G_DEFAULT_ICON,GMarker,GBrowserIsCompatible,GMap2,GSmallMapControl,GClientGeocoder*/
+/*jslint jquery:true, browser:true */
 /**
  * jquery.directions provides a google maps and jquery powered driving directions form and printout
  * 
  * @version 1.0
- * @requires jquery 1.4.2 or >
+ * @requires jquery 1.9.1 or >
  * @usage: 
  * @author Copyright (c) 2010 Adam Eivy (antic | atomantic)
  * @license Dual licensed under the MIT and GPL licenses:
@@ -68,7 +70,7 @@
             map.setCenter(point, opt.zoom);
 
             if (opt.iconImg) {
-                customicon = new GIcon(G_DEFAULT_ICON, opt.iconImg);
+                var customicon = new GIcon(G_DEFAULT_ICON, opt.iconImg);
                 customicon.iconSize = new GSize(opt.iconWidth, opt.iconHeight);
                 markerConf.icon = customicon;
             }
@@ -105,7 +107,6 @@
         iconImg: false,             // custom icon image?
         iconWidth: 50,              // width of custom icon image
         onFail: function(){         // failed loading center element
-            alert('could not find address');
         },    
         onFinish: function(){       // after direction load
         },
